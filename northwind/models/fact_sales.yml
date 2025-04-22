@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: fact_sales
+    description: Transactional fact table for each item ordered
+    columns:
+      - name: orderid
+        description: Source key for the order
+        tests:
+          - not_null
+          - unique
+      - name: customerkey
+        description: FK for dim_customer
+      - name: employeekey
+        description: FK for dim_employee
+      - name: productkey
+        description: FK for dim_product
+      - name: orderdate
+        description: Date of the order
+      - name: quantity
+        description: Quantity of product in the order
+      - name: extendedpriceamount
+        description: Unit price × quantity
+      - name: discountamount
+        description: Discount applied
+      - name: soldamount
+        description: Final sale value after discount

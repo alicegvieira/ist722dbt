@@ -1,0 +1,7 @@
+version: 2
+
+models:
+  - name: obt_sales
+    description: >
+      One Big Table for sales transactions. Joins fact_sales with all related dimensions
+      (customer, employee, product, and date).
